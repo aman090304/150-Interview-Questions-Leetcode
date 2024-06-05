@@ -34,10 +34,14 @@ Coding interviews can be tough, but practice makes perfect. This repository aims
 <br>
 <strong>Clone the Repo:</strong> git clone   <i> https://github.com/yourusername/leetcode-150-interview-questions.git</i>
 <br>
+
 <strong> Navigate to the Question:</strong>  Find the question you're working on.
+
 <br>
 <strong>Review the Solution:  </strong> Check out the solution, understand the logic, and try to implement it yourself.<br>
+
 <strong> Practice:</strong> Use the solutions as a guide to practice and refine your own coding skills.<br>
+
 <strong> Contributing.</strong>
 If you have a better solution or find a bug, feel free to contribute! Just fork the repo, make your changes, and send a pull request. Let's make this repo even more awesome together! 💪 <br> <br>
 
