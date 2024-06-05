@@ -1,16 +1,21 @@
 <h1> 🎯 LeetCode 150 Interview Questions Solutions Playlist </h1>
-Hey there! 👋
+<h2> Hey there! 👋 </h2>
 
 Welcome to my GitHub repository where I share solutions to the 150 Interview Questions Playlist on LeetCode. If you're preparing for coding interviews, you're in the right place! 🚀
+<h3> About This Repo </h3>
 
-About This Repo
 This repo is all about tackling some of the most common and challenging interview questions you'll find on LeetCode. Whether you're brushing up on your skills or diving into coding interviews for the first time, these solutions are here to help you out.
-
-What's Inside?
-150 Questions: Each question from the LeetCode 150 Interview Questions Playlist.
-Detailed Solutions: Clear and concise solutions, with explanations to help you understand the approach.
-Languages used: C++.
-Efficient Code: Focus on writing clean, efficient, and optimized code.
+<h3> What's Inside?
+</h3>
+<ul> 
+  <li>150 Questions: Each question from the LeetCode 150 Interview Questions Playlist.</li>
+  <li> Detailed Solutions: Clear and concise solutions, with explanations to help you understand the approach.
+</li>
+  <li>Languages used: C++.
+ </li>
+  <liEfficient Code: Focus on writing clean, efficient, and optimized code.
+></li>
+</ul>
 
 Why This Repo?
 Coding interviews can be tough, but practice makes perfect. This repository aims to:
