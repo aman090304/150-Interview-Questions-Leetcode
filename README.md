@@ -17,21 +17,31 @@ This repo is all about tackling some of the most common and challenging intervie
 ></li>
 </ul>
 
-Why This Repo?
+<h2> Why This Repo? </h2>
 Coding interviews can be tough, but practice makes perfect. This repository aims to:
+<ul>
+<li>Help you understand different types of problems.
+ </li>
+  <li>Provide you with various approaches to solve a problem.
+</li>
+  <li> Boost your confidence for your next interview.
+</li>
+  
+</ul>
 
-Help you understand different types of problems.
-Provide you with various approaches to solve a problem.
-Boost your confidence for your next interview.
-How to Use
-Clone the Repo: git clone https://github.com/yourusername/leetcode-150-interview-questions.git
-Navigate to the Question: Find the question you're working on.
+<h3> How to Use
+</h3>
+<br>
+<strong>Clone the Repo:</strong> git clone   <i> https://github.com/yourusername/leetcode-150-interview-questions.git</i>
+
+<strong> Navigate to the Question:</strong>  Find the question you're working on.
+<br>
 Review the Solution: Check out the solution, understand the logic, and try to implement it yourself.
 Practice: Use the solutions as a guide to practice and refine your own coding skills.
 Contributing
 If you have a better solution or find a bug, feel free to contribute! Just fork the repo, make your changes, and send a pull request. Let's make this repo even more awesome together! 💪
 
-Connect
+<i>Connect </i>
 Have questions or just want to connect? Find me on Twitter or LinkedIn. Let's chat about code, tech, or anything interesting!
 
 License
@@ -39,5 +49,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Happy coding! Keep pushing forward and ace those interviews! 🌟
 
-Cheers,
-Aman Gupta.
+Cheers,<br>
+<strong>Aman Gupta. </strong>
