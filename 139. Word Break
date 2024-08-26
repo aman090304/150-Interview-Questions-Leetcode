@@ -1,0 +1,105 @@
+Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+Note that the same word in the dictionary may be reused multiple times in the segmentation.
+
+ 
+
+Example 1:
+
+Input: s = "leetcode", wordDict = ["leet","code"]
+Output: true
+Explanation: Return true because "leetcode" can be segmented as "leet code".
+Example 2:
+
+Input: s = "applepenapple", wordDict = ["apple","pen"]
+Output: true
+Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
+Note that you are allowed to reuse a dictionary word.
+Example 3:
+
+Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
+Output: false
+ 
+
+Constraints:
+
+
+Approach:
+Dynamic Programming Approach
+The idea is to use a boolean array dp where dp[i] is true if the substring s[0..i-1] can be segmented into words from the wordDict.
+Initialization:
+
+We create an unordered_set from wordDict for O(1) average-time complexity lookups.
+We create a dp vector of size s.length() + 1 initialized to false, with dp[0] set to true because an empty string can always be segmented.
+DP Array Update:
+
+We iterate over the length of the string s from 1 to s.length().
+For each i, we check every possible substring s[j, i-j] (where 0 <= j < i).
+If the substring s[j, i-j] is in the wordSet and dp[j] is true (meaning the substring s[0, j-j] can be segmented), then we set dp[i] to true and break out of the inner loop.
+Result:
+
+Finally, we return dp[s.length()], which tells us if the entire string s can be segmented into words from wordDict.
+Dry Run
+Let's dry run with the example:
+
+Input:
+s = "leetcode"
+wordDict = {"leet", "code"}
+Step-by-step Execution:
+Initialization:
+
+wordSet = {"leet", "code"}
+dp = [true, false, false, false, false, false, false, false, false] (size is 9)
+Iteration:
+
+i = 1: No substring in wordSet, dp remains unchanged.
+i = 2: No substring in wordSet, dp remains unchanged.
+i = 3: No substring in wordSet, dp remains unchanged.
+i = 4: Substring "leet" found in wordSet, set dp[4] to true.
+i = 5: No substring in wordSet, dp remains unchanged.
+i = 6: No substring in wordSet, dp remains unchanged.
+i = 7: No substring in wordSet, dp remains unchanged.
+i = 8: Substring "code" found in wordSet (and dp[4] is true), set dp[8] to true.
+Final dp Array:
+
+dp = [true, false, false, false, true, false, false, false, true]
+Result:
+
+Return dp[8] which is true.
+```
+
+class Solution {
+public:
+    bool wordBreak(string s, vector<string>& wordDict) {
+        int n = s.length();
+
+        // Create a set of words from the vector so that the lookup cost in the
+        // set becomes O(1)
+        unordered_set<string> wordSet(wordDict.begin(), wordDict.end());
+
+        // Initialize the lookup table
+        vector<bool> dp(n + 1, false);
+
+        // Set the first element to true as it represents the empty string
+        dp[0] = true;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                // Checking if the substring from j to i is present in the
+                // wordSet and dp[j] is true
+                if (dp[j] && wordSet.count(s.substr(j, i - j))) {
+                    dp[i] = true;
+                    // If a substring is found, no need to check further smaller
+                    // substrings
+                    break;
+                }
+            }
+        }
+
+        // Return the last element of dp array
+        return dp[n];
+    }
+};
+
+
+```

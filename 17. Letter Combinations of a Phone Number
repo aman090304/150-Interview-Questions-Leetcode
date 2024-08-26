@@ -1,0 +1,83 @@
+ 
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+
+A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+
+
+ 
+
+Example 1:
+
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+Example 2:
+
+Input: digits = ""
+Output: []
+Example 3:
+
+Input: digits = "2"
+Output: ["a","b","c"]
+ 
+
+Constraints:
+
+0 <= digits.length <= 4
+digits[i] is a digit in the range ['2', '9'].
+
+
+
+```
+class Solution {
+public:
+    void generateCombinationsHelper(const vector<vector<char>>& vectors,int depth, string currentCombination,vector<string>& result) {
+        if (depth == vectors.size()) {
+            result.push_back(currentCombination);
+            return;
+        }
+
+        for (char c : vectors[depth]) {
+            generateCombinationsHelper(vectors, depth + 1,currentCombination + c, result);
+        }
+    }
+
+    vector<string> generateCombinations(const vector<vector<char>>& vectors) {
+        vector<string> result;
+        generateCombinationsHelper(vectors, 0, "", result);
+        return result;
+    }
+
+    vector<vector<char>>find(string digits , unordered_map<int , vector<char>>Nums){
+        vector<vector<char>>vector;
+        for(int i=0;i<digits.length();i++){
+            int temp=digits[i] - '0';
+            vector.push_back(Nums[temp]);
+        }
+        return vector;
+    }
+
+
+    vector<string> letterCombinations(string digits) {
+        if(digits.length()<1){
+            return {};
+        }
+        unordered_map<int, vector<char>> Nums;
+        Nums[2] = { 'a', 'b', 'c' };
+        Nums[3] = { 'd', 'e', 'f' };
+        Nums[4] = { 'g', 'h', 'i' };
+        Nums[5] = { 'j', 'k', 'l' };
+        Nums[6] = { 'm', 'n', 'o' };
+        Nums[7] = { 'p', 'q', 'r','s' };
+        Nums[8] = { 't', 'u', 'v' };
+        Nums[9] = { 'w', 'x', 'y','z' };
+
+        // if()
+        vector<vector<char>>vec = find(digits,Nums);
+        vector<string> combinations = generateCombinations(vec);
+
+        return combinations;
+    }
+};
+
+
+```
