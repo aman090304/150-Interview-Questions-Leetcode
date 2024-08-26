@@ -32,7 +32,7 @@ Coding interviews can be tough, but practice makes perfect. This repository aims
 <h3> How to Use
 </h3>
 <br>
-<strong>Clone the Repo:</strong> git clone   <i> https://github.com/yourusername/leetcode-150-interview-questions.git</i>
+<strong>Clone the Repo:</strong> git clone   <i> https://github.com/aman090304/leetcode-150-interview-questions.git</i>
 <br>
 
 <strong> Navigate to the Question:</strong>  Find the question you're working on.
